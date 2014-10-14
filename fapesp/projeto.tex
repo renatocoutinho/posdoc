@@ -1,0 +1,506 @@
+\documentclass[12pt]{extarticle}
+\usepackage{latexsym,amsfonts,amsmath,amssymb}
+\usepackage[round]{natbib}
+\usepackage{setspace}
+\usepackage[table]{xcolor}
+\usepackage[brazil]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[hyphens]{url}
+\urlstyle{same}
+\usepackage[colorlinks=true,
+            citecolor=black,
+            urlcolor=blue,
+            linkcolor=black,
+            breaklinks]{hyperref} 
+
+\usepackage[T1]{fontenc}
+\usepackage{libertine}
+\renewcommand*\oldstylenums[1]{{\fontfamily{fxlj}\selectfont #1}}
+
+\newcommand{\HRule}{\rule{3.0cm}{0.1mm}}
+\newcommand{\fimdesection}{\centerline{\color{green}\rule{3.0cm}{0.1mm} \hspace{0.4cm} $\diamond$ \hspace{0.4cm} \rule{3.0cm}{0.1mm}}}
+
+\pagestyle{myheadings}
+\markright{{\scriptsize {\sf \color{blue} Projeto de pesquisa --- Renato M.
+Coutinho}\\ \hrulefill }}
+
+\begin{document}
+
+\thispagestyle{empty}
+
+\begin{center}
+    \bf \Large \color{blue} PROJETO DE PESQUISA\\
+    {\it \small  solicitação de bolsa de Pós--Doutorado}
+\end{center}
+\vskip 1.0cm
+\hfill {\it \underline{submetido à FAPESP}}
+\vskip 2.5cm
+
+\setlength{\parindent}{0pt}
+\doublespacing
+{\sf \fontsize{13pt}{1.5em}\selectfont
+Candidato: Renato Mendes Coutinho\\
+Supervisor: Paulo Inácio de Knegt López de Prado\\
+
+{\color{green}\hrule}
+\vskip 1cm
+
+Instituição: Departamento de Ecologia, Instituto de Biociências, Universidade de São Paulo\\
+Nível: Pós--Doutorado\\
+Início: 1º de março de 2015\\
+
+{\color{green}\hrule}
+\vskip 1cm
+
+Projeto: Dinâmica de metacomunidades em ambientes heterogêneos\\
+Palavras--chave: dispersão, metacomunidade, heterogeneidade espacial, dinâmica
+de populações, modelos matemáticos
+}
+
+\newpage
+
+\setlength{\parindent}{20pt}
+\thispagestyle{empty}
+\begin{center}
+    \bf \Large \color{blue} RESUMO
+\end{center}
+\vskip 3.0cm
+{\it
+
+    Este projeto estuda a dinâmica de metacomunidades, isto é, comunidades
+    ecológicas conectadas por dispersão, em contextos em que a heterogeneidade
+    espacial exerce papel importante tanto na dinâmica local, quanto na
+    dinâmica regional.
+
+    O projeto proposto pretende explorar e estender o quadro teórico desses
+    sistemas, incorporando resultados
+    provenientes do estudo de módulos de interação da ecologia de comunidades
+    clássica, bem como da ecologia de paisagens, à dinâmica de metacomunidades.
+}
+
+\newpage
+
+\setlength{\parindent}{20pt}
+\thispagestyle{empty}
+\begin{center}
+    \bf \Large \color{blue} ABSTRACT
+\end{center}
+\vskip 3.0cm
+{\it
+
+    This project studies the dynamics of metacommunities, i.e.
+    ecological communities connected by dispersal, in situations in which
+    spatial heterogeneity plays an important role in both local and regional
+    dynamics.
+
+    The proposed project aims to explore and extend the theoretical framework
+    of such systems by integrating results from the study of ecological modules,
+    as well as from landscape ecology, to the dynamics of metacommunities.
+}
+
+\newpage
+\setcounter{page}{1}
+\onehalfspacing
+
+\section{Introdução}
+
+Metacomunidades são conjuntos de comunidades distribuídas no espaço e
+conectadas por dispersão \citep{hanski1991, holyoak2005}. Assim como no
+contexto de metapopulações, a dinâmica de comunidades ecológicas locais é
+acoplada à dinâmica espacial.  Comunidades, por sua vez, são conjuntos de
+espécies que habitam um mesmo lugar e potencialmente interagem entre si. De um
+ponto de vista prático, pode ser difícil definir as fronteiras de uma
+comunidade, uma vez que diferentes espécies atuam em diferentes escalas de
+espaço e de tempo; assim, muitas vezes define-se a comunidade com base em
+fronteiras naturais, como lagos, ou no tipo de paisagem (tipicamente a
+vegetação predominante).
+
+Embora o termo ``metacomunidade'' seja relativamente recente, ganhando grande
+aceitação nas últimas duas décadas, na década de 60 MacArthur já propunha a
+teoria de biogeografia de ilhas, que explica padrões de diversidade a partir
+do tamanho e da distância da ilha ao continente \citep{macarthur1967}. A
+concepção de que a composição de uma comunidade pode ser influenciada, ou até
+determinada, pelo contexto regional é uma das ideias centrais da ecologia de
+comunidades moderna, e é daí que vem a importância do conceito de
+metacomunidade.
+
+Na última década, o estudo tanto teórico quanto empírico de metacomunidades
+\citep{logue2011} recebeu grande impulso a partir do desenvolvimento de um
+quadro conceitual unificado.  \citet{leibold2004} enquadraram as diversas
+abordagens de estudos de metacomunidades em quatro perspectivas, que não são
+mutuamente exclusivas. A primeira delas é a de dinâmica de manchas
+(\emph{patches}), conceitualmente muito próxima à teoria clássica de
+metapopulações de Levins \citep{levins1969,levins1971}, que modela apenas
+a proporção de manchas ocupadas, determinada pelos processos de colonização
+e extinção. Na perspectiva chamada de ordenamento de espécies (\emph{species
+sorting}), os tipos de recursos determinam a composição local da comunidade,
+de modo que diferenças de nicho são mais importantes que a dinâmica espacial,
+porém esta deve estar presente para que a composição da comunidade acompanhe
+possíveis alterações ambientais.  Já na perspectiva de efeitos de massa
+(\emph{mass effects}), efeitos de densidade, como, por exemplo, o efeito
+resgate (\emph{rescue effect}), são fundamentais. Imigração e emigração têm
+forte impacto na densidade local, que em geral é o foco.  Finalmente, na
+perspectiva neutra todas as espécies são ecologicamente idênticas, e a
+dinâmica é determinada pelos processos de emigração, imigração, extinção e
+especiação. A composição das comunidades muda por deriva ecológica
+(\emph{ecological drift}).
+
+Só é possível que o critério de persistência de comunidades no nível da
+metacomunidade se distingua do critério de persistência local (com espaço
+homogêneo) quando há assincronia temporal entre as comunidades locais, o que
+requer que a dispersão das populações seja incompleta. Por outro lado, eventos
+de dispersão muito raros não permitiriam que efeitos de massa ocorressem, e
+tornaria muito lento o processo de ordenamento de espécies. Dessa maneira,
+vemos que as diferentes perspectivas estão, em geral, associadas a certas
+escalas de tempo dos processos de dispersão e da dinâmica de metacomunidades.
+
+Apesar do enorme esforço de pesquisa da última década, ainda há muitas
+questões inexploradas na teoria de metacomunidades. Este plano de trabalho
+foca em ambientes heterogêneos, em que há grande variabilidade entre as
+manchas em características tais como tamanho, produtividade e conectividade. O
+quadro teórico mais amplo para a compreensão da dinâmica e estabilidade desses
+sistemas foi formulado por Peter Chesson, e consiste na aplicação do conceito
+de transição de escalas \citep{chesson1981, chesson1998, chesson2005}, que
+expõe de maneira clara o papel da covariância entre densidade populacional e
+não--linearidade da resposta (por exemplo, em termos do \emph{fitness}) à
+variação espacial. Essa teoria é de grande abrangência porque é válida para
+regimes em que colonização e extinção locais podem ou não ser importantes para
+a dinâmica local. Apesar disso, é interessante abordar modelos específicos,
+em que os mecanismos de crescimento populacional são explícitos e é possível
+uma conexão clara com características da paisagem.
+
+É importante ressaltar que os modelos desenvolvidos na ecologia, como na
+ciência em geral, podem servir a diversas finalidades. Eles formalizam e dão
+forma concreta a ideias que, de outra maneira, permaneceriam vagas, servindo
+assim para facilitar a comunicação e esclarecer o raciocínio; dessa forma,
+permitem a exploração de cenários compatíveis com as hipóteses aventadas.
+Podem ainda ter capacidade de previsão em cenários específicos, permitindo o
+monitoramento e controle de sistemas, o que os torna importantes para
+aplicações. Finalmente, podem unificar conceitos e hipóteses aparentemente
+díspares, mostrando que, muitas vezes, processos biológicos distintos atuam
+pelos mesmos mecanismos.
+
+\fimdesection
+
+\section{Métodos}
+
+\subsubsection*{Abordagens matemáticas}
+
+Há uma imensa variedade de abordagens matemáticas usadas na modelagem de
+metacomunidades. As principais escolhas referem-se à descrição do espaço e das
+variáveis de estado. A estrutura espacial pode ser representada
+explicitamente, ou como uma rede de manchas conectadas (incluindo aí o caso
+mais simples de apenas duas manchas), ou ainda pode permanecer implícita, caso
+em que apenas as taxas (ou probabilidades) de ocupação do total de manchas são
+modeladas. Já as variáveis de estado podem ser densidades populacionais,
+contínuas, ou números de indivíduos em cada mancha, ou ainda probabilidades
+(ou taxas) de ocupação de manchas. Essas escolhas são fortemente ligadas às
+escalas subjacentes e simplificações do sistema sendo tratado. Por exemplo, um
+modelo clássico (tipo Levins) para duas espécies competindo é definido como
+\citep{slatkin1974}:
+
+\begin{equation}
+  \begin{aligned}
+    \frac{dp_1}{dt} &= m_1 (p_1+p_3) p_0 - \left[ e_1 + (m_2-\mu_2)(p_2+p_3) \right] p_1 + (e_2+\epsilon_2)p_3\\
+    \frac{dp_2}{dt} &= m_2 (p_2+p_3) p_0 - \left[ e_2 + (m_1-\mu_1)(p_1+p_3) \right] p_2 + (e_1+\epsilon_1)p_3\\
+    \frac{dp_3}{dt} &= \left[ (m_1-\mu_1)(p_1+p_3) + (m_2-\mu_2)(p_2+p_3)\right] p_2 -
+    (e_1+\epsilon_1+e_2+\epsilon_2)p_3~,
+  \end{aligned}
+\end{equation}
+% 
+onde os $p_i$ são as proporções de manchas ocupadas, com $p_0 =
+1-(p_1+p_2+p_3)$. A escala de tempo é tal que detalhes da dinâmica local de cada mancha
+são irrelevantes; ao mesmo tempo, assume-se que a dispersão não é suficiente para
+sincronizar a dinâmica de toda a região; assume-se ainda que o ambiente é
+homogêneo -- no sentido de que todas as manchas são equivalentes -- e que há
+extinção estocástica recorrente das populações.
+
+Dadas as hipóteses consideradas acima, a formulação desse modelo não permite
+qualquer conclusão sobre fenômenos que envolvam efeitos de massa ou ordenação
+de espécies. \citet{amarasekare2001} analisam um modelo simples de duas
+manchas que incorpora esses dois efeitos:
+
+\begin{equation}
+    \begin{aligned}
+        \frac{dX_i}{dt} &= r_x X_i \left( 1 - \frac{X_i}{K_{x,i}} - \phi_{x,i}
+        \frac{Y_i}{K_{x,i}} \right) + d_x (X_j - X_i), \\
+        \frac{dY_i}{dt} &= r_y Y_i \left( 1 - \frac{Y_i}{K_{y,i}} - \phi_{y,i}
+        \frac{X_i}{K_{y,i}} \right) + d_y (Y_j - Y_i), \\
+        & i, j = 1, 2, \qquad i \neq j~,
+    \end{aligned}
+\end{equation}
+onde $X_i$ e $Y_i$ são as abundâncias de cada espécie na mancha $i$. Neste
+caso, as densidades são contínuas e a dinâmica populacional é acompanhada numa
+escala de tempo mais curta (``local''). Além disso, pode-se introduzir
+heterogeneidade espacial escolhendo parâmetros distintos para as manchas $1$ e
+$2$. Por outro lado, perde-se a dinâmica de colonização e extinção
+estocásticas (embora ainda haja extinção determinística) e a estrutura
+espacial da região é reduzida a apenas duas manchas.
+
+Apesar de sua elegância, modelos simples de equações diferenciais como os
+apresentados não capturam algumas complexidades da dinâmica espacial que podem
+ser de grande importância. Uma das formas de abordar problemas espacialmente
+complexos é por meio de equações de reação--difusão \citep{murray2002}:
+
+\begin{equation}
+  \begin{aligned}
+    \frac{\partial N}{\partial t} &= \nabla^2 \left[ D(\vec{x})N \right] + f(N,P)\\
+    \frac{\partial P}{\partial t} &= \nabla^2 \left[ D(\vec{x})P \right] + g(N,P)~,
+  \end{aligned}
+\end{equation}
+%
+onde $t$ representa o tempo, $\vec{x}$ a posição no espaço, $N$ e $P$ as
+densidades de duas populações, e $\nabla$ é o operador espacial responsável
+pela redistribuição espacial da população. Em ambientes heterogêneos, é
+essencial analisar cuidadosamente as condições de fronteira, por exemplo,
+entre mancha e matriz \citep{turchin1998, ovaskainen2003}. Essa abordagem tem
+a vantagem de ser estritamente mecanicista no que diz respeito à componente
+espacial do problema.
+
+Naturalmente, outras formas de introdução do espaço podem ser mais vantajosas,
+de acordo com a questão explorada. Por exemplo, \citet{law2000} desenvolvem um
+modelo espacial, estocástico e baseado em indivíduos, para comunidades de
+plantas e, por meio de uma aproximação, conseguem reduzi-lo a um sistema mais
+fácil de tratar. Com isso, eles conseguem analisar um fenômeno importante do
+sistema estudado: espécies competitivamente inferiores podem ser capazes de
+coexistir, e até mesmo superar, espécies com maior habilidade competitiva que
+têm dispersão limitada. Isso é possível porque a espécie superior é mais
+aglomerada espacialmente, aumentando sua competição intra--específica com
+relação à inter--específica, enquanto que a espécie competitivamente inferior
+não sofre o mesmo efeito.
+
+\subsubsection*{Métodos de análise}
+
+%A elaboração de modelos é útil
+%
+%Cada abordagem matemática, como as que acabamos de ver, envolve uma
+%série de hipóteses mas, principalmente, é apropriada para responder a certas
+%questões e não a outras, e daí decorre a análise a ser empregada em cada
+%situação. Pretende-se realizar uma análise ampla 
+%
+%Formulação do modelo \emph{per se}: compreensão de hipóteses mal definidas ou
+%empregadas incorretamente, unificação de abordagens
+
+
+Os métodos tradicionais para a análise de modelos matemáticos como os que
+acabamos de ver se dividem em duas categorias: técnicas
+analíticas e técnicas computacionais. As primeiras consistem basicamente na
+aplicação da chamada análise qualitativa de sistemas de equações diferenciais,
+em que se busca as soluções estacionárias do problema e sua estabilidade, e a
+partir disso pode-se compreender a dinâmica do sistema como um todo
+\citep{murray2002}. Em problemas espacialmente explícitos, tais métodos são de
+difícil implementação, mas existem métodos de homogeneização que, por vezes,
+oferecem boas aproximações \citep{cobbold2014}. Embora usualmente essas
+técnicas se contraponham às técnicas computacionais, várias etapas dos
+cálculos analíticos, tais como encontrar soluções de equações algébricas e
+autovalores, podem se beneficiar de ferramentas computacionais (por exemplo, a
+biblioteca SymPy \citep{sympy}).
+
+Já os métodos computacionais consistem, no mais das vezes, na simulação das
+equações, empregando ferramentas do cálculo numérico \citep{iserles2009}. Já
+temos ampla experiência no uso de bibliotecas de \emph{software} livres em
+Python, como o SciPy \citep{scipy}, que provê rotinas muito robustas para
+integração numérica de sistemas de equações diferenciais.
+
+
+\fimdesection
+
+\section{Objetivos específicos}
+\label{sec:objetivos}
+
+\subsubsection*{\em Modelos espacialmente estruturados de metacomunidades:
+generalizando o conceito de capacidade metapopulacional}
+
+Embora o conceito de metacomunidades seja derivado do de metapopulações,
+muitos dos métodos e ideias deste nunca foram adequadamente traduzidos e
+aplicados ao estudo de metacomunidades. Uma das grandes conquistas da teoria
+moderna de metapopulações foi a formulação de modelos que são de grande
+generalidade, mas também admitem parametrização a partir de dados específicos
+de cada paisagem \citep{hanski2000}, o que tem grande valor em aplicações,
+especialmente em biologia de conservação.
+
+Baseando-nos em formulações gerais da teoria de metacomunidades
+\citep{pillai2010}, visamos estender o modelo desenvolvido por
+\citet{ovaskainen2001} para metapopulações, que consiste em introduzir taxas
+de colonização e extinção dependentes da mancha. Isto é conveniente para
+estudar paisagens específicas, em que as aproximações do modelo de Levins, de
+infinitas manchas iguais, não são satisfatórias. Assim, buscamos ampliar o
+quadro teórico de metacomunidades a fim de obter maior capacidade preditiva e
+permitir contato mais próximo com medidas observacionais e experimentais.
+
+\subsubsection*{\em Estados alternativos e heterogeneidade espacial promovem
+coexistência de metacomunidades: o caso da predação intraguilda}
+
+Heterogeneidade espacial é um dos principais fatores capazes de promover a
+coexistência de espécies \citep{amarasekare2003}, sobretudo devido ao
+mecanismo de ordenamento de espécies, em que cada espécie é superior às outras
+em certas regiões. Propomos explorar essa ideia para compreender melhor
+como a variação entre manchas de \emph{habitat} promove a estabilidade de
+redes tróficas simples.
+
+Em particular, pretendemos estudar o caso da predação intraguilda, um módulo
+de grande importância de um ponto de vista fundamental, já que faz parte de
+qualquer rede trófica, e pode provocar grande variação no comprimento e na
+produtividade de cadeias tróficas, além de ter um papel importante na
+manutenção da diversidade de espécies em largas escalas de espaço
+\citep{mccann2011}. Num sistema com predação intraguilda, o resultado da
+dinâmica (ou seja, a persistência ou não das espécies) depende da
+produtividade de recursos: sob baixa produtividade, apenas a presa intraguilda
+persiste, enquanto que em altas produtividades o predador intraguilda é capaz
+de excluí-la, e há coexistência estável apenas em produtividades
+intermediárias \citep{holt1997}. Essa conclusão é problemática na ecologia de
+populações tradicional, já que a predação intraguilda é ubíqua, mas, de acordo
+com a teoria, ela persistiria apenas para uma faixa de parâmetros muito
+restrita.
+
+Aqui, tomamos como objetivo desenvolver métodos para incorporar explicitamente
+paisagens contendo manchas de diferentes produtividades, e explorar em que
+condições se observa coexistência estável.
+
+\subsubsection*{\em Qual o efeito de características de paisagem sobre a
+dinâmica de metacomunidades?}
+
+Finalmente, buscamos explorar como fatores físicos e comportamentais, como
+tamanho de manchas e a reação de organismos à fronteira entre mancha e matriz,
+pode ter consequências para a distribuição espacial dessas espécies em
+diferentes escalas espaciais. A princípio, isto deve ser explorado em um
+contexto mais simples, de metapopulações \citep{ovaskainen2004} (ou
+``metacomunidades'' sem interações entre espécies), que deve fornecer uma base
+sólida para estender essa abordagem para sistemas com interações entre as
+espécies. 
+
+
+%\subsubsection*{\em Predação intraguilda em manchas de produtividade heterogênea}
+%
+%Em primeiro lugar, escolhemos um módulo de interação -- a predação intraguilda
+%-- que é de grande importância de um ponto de vista fundamental, já que faz
+%parte de qualquer rede trófica, e pode provocar grande variação no comprimento
+%e na produtividade de cadeias tróficas, além de ter um possível papel
+%importante na manutenção da diversidade de espécies em largas escalas de
+%espaço \citep{mccann2011}.
+%
+%A predação intraguilda é de particular interesse para este projeto porque a
+%teoria tradicional prevê que o resultado da sua dinâmica depende da
+%produtividade do sistema: sob baixa produtividade, apenas a presa intraguilda
+%persiste, enquanto que em altas produtividades o predador intraguilda é capaz
+%de excluí-la, e há coexistência estável apenas em produtividades
+%intermediárias \citep{holt1997}. Essa conclusão é problemática na ecologia de
+%populações tradicional, já que a predação intraguilda é ubíqua, mas, de acordo
+%com a teoria, ela persistiria apenas para uma faixa de parâmetros muito
+%restrita.
+%
+%Aqui, tomamos como objetivo desenvolver métodos para incorporar explicitamente
+%paisagens contendo manchas de diferentes produtividades, e explorar em que
+%condições se observa coexistência estável.
+%
+%\subsubsection*{\em Características de paisagem em metacomunidades}
+%
+%Este segundo tópico busca explorar como fatores físicos e comportamentais,
+%como tamanho de manchas e a reação de organismos à fronteira entre mancha e
+%matriz, pode ter consequências para a distribuição espacial dessas espécies em
+%diferentes escalas espaciais. A princípio, isto deve ser explorado em um
+%contexto mais simples, de metapopulações (ou ``metacomunidades'' sem
+%interações entre espécies), que deve fornecer uma base sólida para estender
+%essa abordagem para sistemas com interações entre as espécies. 
+
+\fimdesection
+
+\section{Cronograma de trabalho}
+
+É sempre difícil apresentar um cronograma de trabalho preciso em projetos de
+natureza teórica. O primeiro passo será aprofundar-se na literatura desse
+tópico e o ferramental de modelagem que ele abriga. A seguir, iremos
+desenvolver e refinar modelos explorando os problemas propostos na seção
+\ref{sec:objetivos}. Até o fim do ano, esperamos obter resultados suficientes
+para publicação.
+
+A elaboração de cada modelo é um processo criativo, que envolve idas e vindas,
+já que em cada passo é necessário analisar as hipóteses e suas consequências,
+usando os métodos analíticos e computacionais descritos, alterando formas de
+descrição, hipóteses e análises, até alcançar modelos que sejam informativos,
+porém suficientemente simples para que sua interpretação seja clara. 
+
+Naturalmente, o candidato deve dar continuidade a colaborações nacionais e
+internacionais que têm se mostrado produtivas.
+
+\begin{table}[htb] 
+\small
+\noindent
+\begin{tabular}{p{6cm}|p{0.3cm}p{0.3cm}p{0.3cm}p{0.3cm}p{0.3cm}p{0.3cm}p{0.3cm}p{0.3cm}p{0.3cm}p{0.3cm}p{0.3cm}p{0.3cm}}
+    {\normalsize Atividades\textbackslash\hspace{0.1cm} Bimestre} & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8
+                                                                & 9 & 10 & 11 & 12 \\ \hline 
+                                              revisão da literatura& \cellcolor[gray]{0.8} & \cellcolor[gray]{0.8} &  &  &  &  &  &  &  &  &  &   \\
+                                    modelo predação intraguilda &
+                                          \cellcolor[gray]{0.8} &
+                                          \cellcolor[gray]{0.8} &
+                                          \cellcolor[gray]{0.8} &
+                                          \cellcolor[gray]{0.8} &
+                                          \cellcolor[gray]{0.8} & & & & & & & \\
+                                    \mbox{modelos espacialmente estruturados} & & & &
+                                          \cellcolor[gray]{0.8} &
+                                          \cellcolor[gray]{0.8} &
+                                          \cellcolor[gray]{0.8} &
+                                          \cellcolor[gray]{0.8} &
+                                          \cellcolor[gray]{0.8} & & & & \\
+                                    \mbox{modelos de paisagens para metacom.} & & & & & & &
+                                          \cellcolor[gray]{0.8} &
+                                          \cellcolor[gray]{0.8} &
+                                          \cellcolor[gray]{0.8} &
+                                          \cellcolor[gray]{0.8} &
+                                          \cellcolor[gray]{0.8} & \\
+                                     \mbox{exploração conexão entre modelos} & & &
+                                          \cellcolor[gray]{0.8} &
+                                          \cellcolor[gray]{0.8} &
+                                          \cellcolor[gray]{0.8} &
+                                          \cellcolor[gray]{0.8} &
+                                          \cellcolor[gray]{0.8} &
+                                          \cellcolor[gray]{0.8} &
+                                          \cellcolor[gray]{0.8} &
+                                          \cellcolor[gray]{0.8} &
+                                          \cellcolor[gray]{0.8} & \\ 
+                                    escrita dos resultados & & & & & 
+                                          \cellcolor[gray]{0.8} &
+                                          \cellcolor[gray]{0.8} & & & & &
+                                          \cellcolor[gray]{0.8} &
+    \cellcolor[gray]{0.8} \\
+\end{tabular}
+\end{table}
+
+\fimdesection
+
+\section{Considerações finais} % justificativa?
+
+O candidato desenvolve desde sua graduação pesquisa em sistemas dinâmicos em
+biologia, buscando ativamente colaboração com pesquisadores da ecologia. Entre
+os resultados há artigos em periódicos de alto impacto da área
+\citep{coutinho2012, laporta2013, assaneo2013, fonseca2013, amarasekare2013,
+moretti2013, azevedo2014, amarasekare2014} e participação como professor
+assistente nas \emph{Southern Summer Schools on Mathematical Biology}
+\citep{SSSMB2012, SSSMB2013, SSSMB2014}, que promovem a interação entre
+estudantes das ciências exatas e biológicas. O supervisor da proposta é hoje
+um dos colaboradores principais do candidato e busca, igualmente, impulsionar
+o diálogo com pesquisadores das ciências exatas para avanço da teoria. A
+presente proposta tem o objetivo de estreitar esta colaboração e consolidar a
+formação do candidato na área de ecologia teórica, com benefícios de parte a
+parte.
+
+Este projeto fará uso de diversas técnicas provenientes da teoria de sistemas
+dinâmicos para avançar a compreensão de metacomunidades. Assim, a formação
+interdisciplinar do candidato é uma grande oportunidade, já que a familiaridade com
+modelos em ecologia permite navegar nessa área, que apresenta uma vasta gama de
+abordagens teóricas e de argumentos e hipóteses cuja tradução matemática pode
+ser sutil.
+
+
+\bibliographystyle{amnatnat}
+\bibliography{referencias,/home/renato/Dropbox/artigos/meus/minhas_citacoes}
+
+\vskip 3.0cm
+{\hfill S\~ao Paulo, \today}
+
+{\hfill  \it Paulo Inácio de Knegt López de Prado}
+
+{\hfill  \it Renato Mendes Coutinho}
+
+\end{document}
+

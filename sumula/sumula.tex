@@ -1,0 +1,173 @@
+\documentclass[a4paper ,11pt]{article}
+\RequirePackage{moderncvcollection}
+\usepackage[brazil]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{hyperref}
+\usepackage{geometry}
+\usepackage{xcolor}
+
+% Uncomment the following lines to use the Palatino font.  Remove the
+% [osf] bit if you don't like the old style figures.
+%
+\usepackage[T1]{fontenc}
+\usepackage[osf]{mathpazo}
+
+\def\name{Renato Mendes Coutinho}
+
+% The following metadata will show up in the PDF properties
+\hypersetup{
+    colorlinks = true,
+    urlcolor = black,
+    pdfauthor = {\name},
+    pdfkeywords = {ecologia teórica},
+    pdftitle = {\name: Curriculum Vitae},
+    pdfsubject = {Curriculum Vitae},
+    pdfpagemode = UseNone
+}
+
+\geometry{textheight=8.5in, textwidth=6in}
+
+% Customize page headers
+\pagestyle{empty}
+%\markright{\name}
+%\thispagestyle{empty}
+
+% Customize section headings
+\usepackage{sectsty}
+\subsectionfont{\rmfamily\mdseries\itshape\large}
+
+% Don't indent paragraphs.
+\setlength\parindent{0em}
+
+% Make lists without bullets
+\renewenvironment{enumerate}{
+  \begin{list}{}{
+    \setlength{\leftmargin}{2em}
+  }
+}{
+  \end{list}
+}
+
+\usepackage{pifont}
+\renewcommand{\labelitemi}{\ding{226}}
+
+%%% excerpts from moderncv
+\RequirePackage{calc}
+\RequirePackage{xparse}
+\newlength{\separatorcolumnwidth}
+\setlength{\separatorcolumnwidth}{0.025\textwidth}
+\newlength{\hintscolumnwidth}
+\setlength{\hintscolumnwidth}{0.175\textwidth}
+\newlength{\maincolumnwidth}
+\setlength{\maincolumnwidth}{\textwidth-\separatorcolumnwidth-\hintscolumnwidth}%
+\newcommand*{\hintfont}{}
+\definecolor{color0}{rgb}{0,0,0}% main default color, normally left to black
+\newcommand*{\hintstyle}[1]{{\hintfont\textcolor{color0}{#1}}}
+
+\newcommand*{\cvitem}[3][.25em]{%
+  \begin{tabular}{@{}p{\hintscolumnwidth}@{\hspace{\separatorcolumnwidth}}p{\maincolumnwidth}@{}}%
+    \raggedleft\hintstyle{#2} &{#3}%
+  \end{tabular}%
+  \par\addvspace{#1}}
+
+\newcommand*{\cventry}[7][.25em]{%
+  \cvitem[#1]{#2}{%
+    {\bfseries#3}%
+   \ifthenelse{\equal{#4}{}}{}{, {\slshape#4}}%
+    \ifthenelse{\equal{#5}{}}{}{ (#5)}%
+    \ifthenelse{\equal{#6}{}}{}{, #6}%
+    .\strut%
+    \ifx&#7&%
+      \else{\newline{}\begin{minipage}[t]{\linewidth}\small#7\end{minipage}}\fi}}
+% usage: \cventry[spacing]{years}{degree/job title}{institution/employer}{localization}{optionnal: grade/...}{optional: comment/job description}
+
+%%%%
+
+\begin{document}
+
+\centerline{\Large Súmula Curricular}
+\vspace{2em}
+\centerline{\huge\bf \name}
+
+\vspace{.5cm}
+
+%\begin{minipage}[t]{0.5\textwidth}
+%    \href{http://www.ift.unesp.br/}{IFT/Unesp} - São Paulo, SP \\
+%    Data de Nascimento: 15 de Outubro de 1985 \\
+%    Nacionalidade: Brasileira
+%\end{minipage}
+%\begin{minipage}[t]{0.5\textwidth}
+%    Telefone: 11 3624 8308\\
+%    Celular: 11 9694 7061 \\
+%    Email: \href{mailto:renatomc@ift.unesp.br}{\tt renatomc@ift.unesp.br} \\
+%\end{minipage}
+
+\section{Formação Acadêmica}
+
+\cventry{2004--2008}{Graduação em Ciências Moleculares}{Universidade de São Paulo}{São Paulo}{}{}
+\cventry{2008--2010}{Mestrado em Física}{Instituto de Física Teórica - Unesp}{São
+Paulo}{Dissertação: ``Equações diferenciais com retardo em biologia de
+populações''}{Orientador: Roberto Kraenkel. Bolsista do CNPq.}
+\cventry{2010--}{Doutorado em Física}{Instituto de Física Teórica - Unesp}{São
+Paulo}{Tese: ``Dinâmica de populações estruturadas''}{Orientador: Roberto
+Kraenkel. Bolsista da FAPESP}
+\cventry{2012--2013}{Estágio Sanduíche}{University of Potsdam}{Potsdam,
+Alemanha}{Projeto: ``Trait dynamics in interacting populations''}{Supervisora: Ursula Gaedke.
+Bolsista da FAPESP.}
+
+%\begin{enumerate}
+%    \item Bacharelado em Ciências Moleculares pela
+%        Universidade de São Paulo de 2004 a 2008.
+%        \begin{enumerate}
+%            \item Bolsista de iniciação científica do CNPq de 09/2004 a
+%                06/2006 sob orientação da professora Alinka Lépine.
+%            \item Aluno de iniciação científica de 08/2006 a
+%                06/2008 sob orientação do professor Marcus Aguiar.
+%        \end{enumerate}
+%    \item Atualmente concluindo o Mestrado iniciado em 08/2008 no Instituto de
+%        Física Teórica (IFT) da Unesp sob orientação do professor Roberto André
+%        Kraenkel, com bolsa CNPq desde 07/2009.
+%\end{enumerate}
+
+\section{Histórico profissional}
+Nada a declarar
+
+\section{Produção científica relevante}
+
+\renewcommand{\refname}{Artigos}
+
+\nocite{*}
+\bibliographystyle{abbrv}
+\bibliography{minhas_citacoes}
+
+\section{Financiamentos à pesquisa vigentes}
+
+Bolsa de doutorado regular pela FAPESP (vigência de 09/2010--08/2012 e 09/2013--02/2015).
+
+\section{Orientações em andamento}
+Nada a declarar
+
+\section{Indicadores quantitativos}
+\begin{enumerate}
+    \item Livros publicados: \textbf{0}
+    \item Publicações em periódicos: \textbf{8}
+    \item Capítulos de livros: \textbf{0}
+    \item Teses de mestrado orientadas: \textbf{0}
+    \item Teses de doutorado orientadas: \textbf{0}
+    \item Citações (Google Scholar): \textbf{12}
+\end{enumerate}
+
+\section{\emph{My Citations} Google Scholar}
+\url{http://scholar.google.com.br/citations?user=RkgQvSYAAAAJ&hl=pt-BR}
+
+\section{Outras informações}
+\begin{itemize}
+    \item Monitor das escolas de verão \emph{Métodos matemáticos em biologia de
+populações} de 2009, 2010 e 2011 e das \emph{Southern Summer Schools on Mathematical
+Biology} de 2012 e 2013, e professor assistente na edição de 2014.
+    \item Monitor do curso de Ecologia de Populações oferecida pela Pós-Graduação do Departamento de
+Ecologia do IB-USP
+\end{itemize}
+
+\end{document}
+
