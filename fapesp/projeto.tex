@@ -133,47 +133,56 @@ fronteiras naturais, como lagos, ou no tipo de paisagem (tipicamente a
 vegetação predominante).
 
 Embora o termo ``metacomunidade'' seja relativamente recente, ganhando grande
-aceitação nas últimas duas décadas, na década de 60 MacArthur já propunha a
-teoria de biogeografia de ilhas, que explica padrões de diversidade a partir
-do tamanho e da distância da ilha ao continente \citep{macarthur1967}. A
-concepção de que a composição de uma comunidade pode ser influenciada, ou até
-determinada, pelo contexto regional é uma das ideias centrais da ecologia de
-comunidades moderna, e é daí que vem a importância do conceito de
+aceitação nas últimas duas décadas, na década de 60 Robert MacArthur e Edward Wilson
+já propunham a
+teoria de biogeografia de ilhas, que demonstra como o número de espécies em uma comunidade pode estabilizar-se
+pelo balanço entre colonização e extinção local {macarthur1967}. 
+É da mesma época a teoria clássica de metapopulações \citep{levins1969,levins1971}, 
+que mostra como a proporção de manchas ocupadas por uma espécie pode também estabilizar-se pelo 
+balanço entre colonização e extinção.
+%% Colocar aqui nesta seção de fundadores o Skellma?
+A concepção de que padrões de riqueza e ocupação em sistemas de manchas pode ser influenciada, ou até
+determinada, pelo contexto regional por meio do trânsito de indivíduos 
+é uma das ideias centrais da ecologia de
+comunidades moderna, que atualmente é desenvolvida desenvolvida pelo conceito de
 metacomunidade.
 
 Na última década, o estudo tanto teórico quanto empírico de metacomunidades
-\citep{logue2011} recebeu grande impulso a partir do desenvolvimento de um
+\citep{logue2011} avançou com o desenvolvimento de um
 quadro conceitual unificado.  \citet{leibold2004} enquadraram as diversas
 abordagens de estudos de metacomunidades em quatro perspectivas, que não são
 mutuamente exclusivas. A primeira delas é a de dinâmica de manchas
 (\emph{patches}), conceitualmente muito próxima à teoria clássica de
-metapopulações de Levins \citep{levins1969,levins1971}, que modela apenas
-a proporção de manchas ocupadas, determinada pelos processos de colonização
-e extinção. Na perspectiva chamada de ordenamento de espécies (\emph{species
-sorting}), os tipos de recursos determinam a composição local da comunidade,
+metapopulações de Levins \citep{levins1969,levins1971}. 
+Na perspectiva chamada de %ordenamento de espécies 
+(\emph{species sorting}), os tipos de recursos determinam a composição local da comunidade,
 de modo que diferenças de nicho são mais importantes que a dinâmica espacial,
 porém esta deve estar presente para que a composição da comunidade acompanhe
-possíveis alterações ambientais.  Já na perspectiva de efeitos de massa
-(\emph{mass effects}), efeitos de densidade, como, por exemplo, o efeito
-resgate (\emph{rescue effect}), são fundamentais. Imigração e emigração têm
-forte impacto na densidade local, que em geral é o foco.  Finalmente, na
-perspectiva neutra todas as espécies são ecologicamente idênticas, e a
-dinâmica é determinada pelos processos de emigração, imigração, extinção e
-especiação. A composição das comunidades muda por deriva ecológica
-(\emph{ecological drift}).
+possíveis alterações ambientais.  
+%% Seguro que é isto? Minha leitura de species sorting é que as condições seletivas em cada mancha são diferentes, 
+%% portanto processos ligados a nicho operam nesta escala, combinando-se com os processos de 
+%% migração. 
+Já na perspectiva de efeitos de massa
+(\emph{mass effects}), efeitos de densidade sobre as taxas de colonização, como, por exemplo, o efeito
+resgate (\emph{rescue effect}), são fundamentais. As relações entre imigração, emigração e densdidades nas manchas
+são importantes para descrever a dinâmica da metacomunidade, como no caso de fontes e sorvedouros (\emph{source-sink dynamics}).
+Na perspectiva neutra a riqueza se estabiliza e a composição deriva 
+pelo  balanço entre extinções estocásticas e colonizações no nível local 
+e especiação no nível regional. %% citar o Hubbell
 
 Só é possível que o critério de persistência de comunidades no nível da
-metacomunidade se distingua do critério de persistência local (com espaço
+metacomunidade se distinga do critério de persistência local (com espaço
 homogêneo) quando há assincronia temporal entre as comunidades locais, o que
-requer que a dispersão das populações seja incompleta. Por outro lado, eventos
+requer que a dispersão das populações seja fraca o suficiente. %%citar 1-2 referências. Sugiro alguma das revisões do Leibold e Mouquet & Loreau
+Por outro lado, eventos
 de dispersão muito raros não permitiriam que efeitos de massa ocorressem, e
-tornaria muito lento o processo de ordenamento de espécies. Dessa maneira,
+tornaria muito lento o processo de \emph{sepcies sorting}. Dessa maneira,
 vemos que as diferentes perspectivas estão, em geral, associadas a certas
 escalas de tempo dos processos de dispersão e da dinâmica de metacomunidades.
 
 Apesar do enorme esforço de pesquisa da última década, ainda há muitas
 questões inexploradas na teoria de metacomunidades. Este plano de trabalho
-foca em ambientes heterogêneos, em que há grande variabilidade entre as
+aborda o caso de espaço explícito heterogêneo, em que há grande variabilidade entre as
 manchas em características tais como tamanho, produtividade e conectividade. O
 quadro teórico mais amplo para a compreensão da dinâmica e estabilidade desses
 sistemas foi formulado por Peter Chesson, e consiste na aplicação do conceito
@@ -195,11 +204,15 @@ Podem ainda ter capacidade de previsão em cenários específicos, permitindo o
 monitoramento e controle de sistemas, o que os torna importantes para
 aplicações. Finalmente, podem unificar conceitos e hipóteses aparentemente
 díspares, mostrando que, muitas vezes, processos biológicos distintos atuam
-pelos mesmos mecanismos.
+pelos mesmos mecanismos. Modelos em ecologia e evolução em geral não podem 
+atender a estes três objetivos igualmente bem, havendo uma demanda conflitante
+entre generalidade, realismo e precisão \citep{levins1966}. 
+Este proposta concentra-se no desenvolvimento de modelos gerais e com realismo biológico
+que contribuam para o avanço da teoria de metacomunidades.
 
 \fimdesection
 
-\section{Métodos}
+%\section{Métodos} sugrio que esta parte faça parte da introdução e a outra vá para métodos, depois dos objetivos
 
 \subsubsection*{Abordagens matemáticas}
 
@@ -211,8 +224,10 @@ mais simples de apenas duas manchas), ou ainda pode permanecer implícita, caso
 em que apenas as taxas (ou probabilidades) de ocupação do total de manchas são
 modeladas. Já as variáveis de estado podem ser densidades populacionais,
 contínuas, ou números de indivíduos em cada mancha, ou ainda probabilidades
-(ou taxas) de ocupação de manchas. Essas escolhas são fortemente ligadas às
-escalas subjacentes e simplificações do sistema sendo tratado. Por exemplo, um
+(ou taxas) de ocupação de manchas. 
+%% No caso de ocupação as variáveis de estado não seriam a proporção de manchas ocupadas? Taxas e probabilidade me parecem parãmetros
+Essas escolhas são fortemente ligadas às
+escalas subjacentes e prioridades da modelagem. Por exemplo, um
 modelo clássico (tipo Levins) para duas espécies competindo é definido como
 \citep{slatkin1974}:
 
@@ -231,10 +246,11 @@ são irrelevantes; ao mesmo tempo, assume-se que a dispersão não é suficiente
 sincronizar a dinâmica de toda a região; assume-se ainda que o ambiente é
 homogêneo -- no sentido de que todas as manchas são equivalentes -- e que há
 extinção estocástica recorrente das populações.
+%% Não é importante assinalar que o espaço é implícito?
 
-Dadas as hipóteses consideradas acima, a formulação desse modelo não permite
-qualquer conclusão sobre fenômenos que envolvam efeitos de massa ou ordenação
-de espécies. \citet{amarasekare2001} analisam um modelo simples de duas
+Dadas as premissas acima, a formulação desse modelo não permite
+qualquer conclusão sobre fenômenos que envolvam efeitos de massa ou \emph{species sorting}. 
+\citet{amarasekare2001} analisam um modelo simples de duas
 manchas que incorpora esses dois efeitos:
 
 \begin{equation}
@@ -246,6 +262,7 @@ manchas que incorpora esses dois efeitos:
         & i, j = 1, 2, \qquad i \neq j~,
     \end{aligned}
 \end{equation}
+
 onde $X_i$ e $Y_i$ são as abundâncias de cada espécie na mancha $i$. Neste
 caso, as densidades são contínuas e a dinâmica populacional é acompanhada numa
 escala de tempo mais curta (``local''). Além disso, pode-se introduzir
@@ -271,22 +288,26 @@ densidades de duas populações, e $\nabla$ é o operador espacial responsável
 pela redistribuição espacial da população. Em ambientes heterogêneos, é
 essencial analisar cuidadosamente as condições de fronteira, por exemplo,
 entre mancha e matriz \citep{turchin1998, ovaskainen2003}. Essa abordagem tem
-a vantagem de ser estritamente mecanicista no que diz respeito à componente
+a vantagem de que o operador $\nabla$ permite a descrição mecanicista da componente
 espacial do problema.
 
 Naturalmente, outras formas de introdução do espaço podem ser mais vantajosas,
 de acordo com a questão explorada. Por exemplo, \citet{law2000} desenvolvem um
 modelo espacial, estocástico e baseado em indivíduos, para comunidades de
-plantas e, por meio de uma aproximação, conseguem reduzi-lo a um sistema mais
-fácil de tratar. Com isso, eles conseguem analisar um fenômeno importante do
-sistema estudado: espécies competitivamente inferiores podem ser capazes de
-coexistir, e até mesmo superar, espécies com maior habilidade competitiva que
-têm dispersão limitada. Isso é possível porque a espécie superior é mais
+plantas e, por meio de uma aproximação, conseguem reduzí-lo a um sistema mais
+fácil de tratar. 
+%% reduziram a um sistema de equações de reação-difusão?
+Com isso, eles conseguiram demosntrar que 
+espécies competitivamente inferiores podem
+coexistir, e até mesmo superar, 
+%% superar = exluir ou a ter densidades maiores?
+espécies com maior habilidade competitiva que
+têm dispersão limitada. Isso é possível quando a espécie superior é mais
 aglomerada espacialmente, aumentando sua competição intra--específica com
 relação à inter--específica, enquanto que a espécie competitivamente inferior
 não sofre o mesmo efeito.
 
-\subsubsection*{Métodos de análise}
+%\subsubsection*{Métodos de análise}
 
 %A elaboração de modelos é útil
 %
@@ -297,27 +318,6 @@ não sofre o mesmo efeito.
 %
 %Formulação do modelo \emph{per se}: compreensão de hipóteses mal definidas ou
 %empregadas incorretamente, unificação de abordagens
-
-
-Os métodos tradicionais para a análise de modelos matemáticos como os que
-acabamos de ver se dividem em duas categorias: técnicas
-analíticas e técnicas computacionais. As primeiras consistem basicamente na
-aplicação da chamada análise qualitativa de sistemas de equações diferenciais,
-em que se busca as soluções estacionárias do problema e sua estabilidade, e a
-partir disso pode-se compreender a dinâmica do sistema como um todo
-\citep{murray2002}. Em problemas espacialmente explícitos, tais métodos são de
-difícil implementação, mas existem métodos de homogeneização que, por vezes,
-oferecem boas aproximações \citep{cobbold2014}. Embora usualmente essas
-técnicas se contraponham às técnicas computacionais, várias etapas dos
-cálculos analíticos, tais como encontrar soluções de equações algébricas e
-autovalores, podem se beneficiar de ferramentas computacionais (por exemplo, a
-biblioteca SymPy \citep{sympy}).
-
-Já os métodos computacionais consistem, no mais das vezes, na simulação das
-equações, empregando ferramentas do cálculo numérico \citep{iserles2009}. Já
-temos ampla experiência no uso de bibliotecas de \emph{software} livres em
-Python, como o SciPy \citep{scipy}, que provê rotinas muito robustas para
-integração numérica de sistemas de equações diferenciais.
 
 
 \fimdesection
@@ -350,8 +350,9 @@ coexistência de metacomunidades: o caso da predação intraguilda}
 
 Heterogeneidade espacial é um dos principais fatores capazes de promover a
 coexistência de espécies \citep{amarasekare2003}, sobretudo devido ao
-mecanismo de ordenamento de espécies, em que cada espécie é superior às outras
-em certas regiões. Propomos explorar essa ideia para compreender melhor
+mecanismo de \emph{species sorting}, em que as hierarquias competitivas variam entre manchas, 
+devido a diferenças nas condições e recursos das manchas. 
+Propomos explorar essa ideia para compreender melhor
 como a variação entre manchas de \emph{habitat} promove a estabilidade de
 redes tróficas simples.
 
@@ -370,7 +371,7 @@ populações tradicional, já que a predação intraguilda é ubíqua, mas, de a
 com a teoria, ela persistiria apenas para uma faixa de parâmetros muito
 restrita.
 
-Aqui, tomamos como objetivo desenvolver métodos para incorporar explicitamente
+Aqui, tomamos como objetivo desenvolver modelos que incorporem explicitamente
 paisagens contendo manchas de diferentes produtividades, e explorar em que
 condições se observa coexistência estável.
 
@@ -378,7 +379,7 @@ condições se observa coexistência estável.
 dinâmica de metacomunidades?}
 
 Finalmente, buscamos explorar como fatores físicos e comportamentais, como
-tamanho de manchas e a reação de organismos à fronteira entre mancha e matriz,
+tamanho de manchas e a reação de organismos à borda da mancha com a  matriz, %borda é um termo mais caro aos ecólogos de paisagem
 pode ter consequências para a distribuição espacial dessas espécies em
 diferentes escalas espaciais. A princípio, isto deve ser explorado em um
 contexto mais simples, de metapopulações \citep{ovaskainen2004} (ou
@@ -422,23 +423,60 @@ espécies.
 
 \fimdesection
 
+\section{Procedimentos}
+%% Esta é parte que demanda mais atenção, veja comentários abaixo.
+%% O que te sugiro trabalhar é tranquilizar o parecerista de que há um método e qual é ele.
+%% Um roteiro:
+%% 1 - Definir a abordagem analítica matemática e distinguí-la da de simulação (que é a que vem à cabeça de biólogos quando se fala de métodos computacionais). Aqui ajuda citar os principais métodos computacionais disponíveis for dummies (integração numérica, etc).
+%% 2 - Explicar numa sequencia de passos for dummies o que é desenvolver um modelo matemático com auxílio destas ferramnetas. Aqui cabem tanto as etapas básicas como em cada uma alguma tecnicalidade de como é feito (e.g., crição de classes em Python e seus métodos para realizar os cálculos, etc).
+%% 3 - Indicar nestes passos os critérios para avaliar se os objetivos proposto para modelo foi alcançado.
+%% Sei que pode parecer estranho tanto detalhe, mas há uma cultura na bio de que métodologia tem que ter um protocolo mais definido.
+Os métodos tradicionais para a análise de modelos matemáticos como os mencionamos 
+se dividem em duas categorias: técnicas
+analíticas e técnicas computacionais. As primeiras consistem basicamente na
+aplicação da chamada análise qualitativa de sistemas de equações diferenciais,
+em que se busca as soluções estacionárias do problema e sua estabilidade, e a
+partir disso pode-se compreender a dinâmica do sistema como um todo
+\citep{murray2002}. Em problemas espacialmente explícitos, tais métodos são de
+difícil implementação, mas existem métodos de homogeneização que, por vezes,
+oferecem boas aproximações \citep{cobbold2014}. Embora usualmente essas
+técnicas se contraponham às técnicas computacionais, várias etapas dos
+cálculos analíticos, tais como encontrar soluções de equações algébricas e
+autovalores, podem se beneficiar de ferramentas computacionais (por exemplo, a
+biblioteca SymPy \citep{sympy}).
+
+Já os métodos computacionais consistem, no mais das vezes, na simulação das
+equações, empregando ferramentas do cálculo numérico \citep{iserles2009}. Já
+temos ampla experiência no uso de bibliotecas de \emph{software} livres em
+Python, como o SciPy \citep{scipy}, que provê rotinas muito robustas para
+integração numérica de sistemas de equações diferenciais.
+
+%% te sugiro avaliar se é preciso distinguir abordagem analítica do que vc chama de computacional, que para biólogos parece a mesma coisa. Por outro lado, abordagem computacional para biólogos são simulações computacionais da dinâmica, como no caso de ABMs, autômatos celulares, etc. Esta é a distinção crucial para nós em relação ao que chamamos de métodos matemáticos, balaio no qual jogamos tanto soluções analíticas senso estrito como as que usam aproximações numéricas computacionais.
+%% Nós colocamos no mesmo balaio porque não nos parece haver muita diferença qualitativa entre uma análise qualitativa (estados estacionários, equilíbrio, etc) analítica ou numérica/computacional.
+%% A distinção aqui vai servir apenas para pontuar que vc vai usar a abordagem matemática e não a de simulações.
+%% Em seguida, e mais importante de tudo: um resumo das etapas de desenvolvimento do modelo, na forma de bullets, para que não digam que falta uma receita ao projeto. Biólogos tem horro a metodologias muito abertas, por estranho que te pareça.
+
+
 \section{Cronograma de trabalho}
+% Se os passos gerais de elaboração de cada modelo estiverem claros na seção acima estas considerações aqui são desnecessárias.
+% O importante é pensar numa descrição
 
-É sempre difícil apresentar um cronograma de trabalho preciso em projetos de
-natureza teórica. O primeiro passo será aprofundar-se na literatura desse
-tópico e o ferramental de modelagem que ele abriga. A seguir, iremos
-desenvolver e refinar modelos explorando os problemas propostos na seção
-\ref{sec:objetivos}. Até o fim do ano, esperamos obter resultados suficientes
-para publicação.
 
-A elaboração de cada modelo é um processo criativo, que envolve idas e vindas,
-já que em cada passo é necessário analisar as hipóteses e suas consequências,
-usando os métodos analíticos e computacionais descritos, alterando formas de
-descrição, hipóteses e análises, até alcançar modelos que sejam informativos,
-porém suficientemente simples para que sua interpretação seja clara. 
+%É sempre difícil apresentar um cronograma de trabalho preciso em projetos de natureza teórica. 
+% O primeiro passo será aprofundar-se na literatura pertinente
+% e suas principais classes de modelos. A seguir, iremos
+% desenvolver e refinar modelos explorando os problemas propostos na seção
+% \ref{sec:objetivos}. Até o fim do ano, esperamos obter resultados suficientes
+% para publicação.
 
-Naturalmente, o candidato deve dar continuidade a colaborações nacionais e
-internacionais que têm se mostrado produtivas.
+% A elaboração de cada modelo é um processo criativo, que envolve idas e vindas,
+% já que em cada passo é necessário analisar as hipóteses e suas consequências,
+% usando os métodos analíticos e computacionais descritos, alterando formas de
+% descrição, hipóteses e análises, até alcançar modelos que sejam informativos,
+% porém suficientemente simples para que sua interpretação seja clara. 
+
+% Naturalmente, o candidato deve dar continuidade a colaborações nacionais e
+% internacionais que têm se mostrado produtivas.
 
 \begin{table}[htb] 
 \small
