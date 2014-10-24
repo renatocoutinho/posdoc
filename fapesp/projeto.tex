@@ -144,7 +144,7 @@ balanço entre colonização e extinção.
 A concepção de que padrões de riqueza e ocupação em sistemas de manchas pode ser influenciada, ou até
 determinada, pelo contexto regional por meio do trânsito de indivíduos 
 é uma das ideias centrais da ecologia de
-comunidades moderna, que atualmente é desenvolvida desenvolvida pelo conceito de
+comunidades moderna, que atualmente é desenvolvida pelo conceito de
 metacomunidade.
 
 Na última década, o estudo tanto teórico quanto empírico de metacomunidades
@@ -155,28 +155,38 @@ mutuamente exclusivas. A primeira delas é a de dinâmica de manchas
 (\emph{patches}), conceitualmente muito próxima à teoria clássica de
 metapopulações de Levins \citep{levins1969,levins1971}. 
 Na perspectiva chamada de %ordenamento de espécies 
-(\emph{species sorting}), os tipos de recursos determinam a composição local da comunidade,
+\emph{species sorting}, os tipos de recursos determinam a composição local da comunidade,
 de modo que diferenças de nicho são mais importantes que a dinâmica espacial,
-porém esta deve estar presente para que a composição da comunidade acompanhe
-possíveis alterações ambientais.  
+e esta serve, no caso extremo, apenas para manter a composição da comunidade em
+cada mancha em sincronia com suas características quando há alterações ambientais. 
 %% Seguro que é isto? Minha leitura de species sorting é que as condições seletivas em cada mancha são diferentes, 
 %% portanto processos ligados a nicho operam nesta escala, combinando-se com os processos de 
-%% migração. 
+%% migração.
+%%%% Você está certo, mas o que eu disse é essencialmente isso: quando você
+%%%% tem predominância de efeitos locais, a migração é importante apenas pra
+%%%% colonizar as manchas vazias com a espécie mais adaptada àquela mancha.
+%%%% Claro que o que eu escrevo aqui é a versão extrema de species sorting,
+%%%% é claro que você pode introduzir esses efeitos de maneira que eles tenham
+%%%% relativamente pouca importância. Alterei um pouco a frase, vê se fica
+%%%% melhor.
 Já na perspectiva de efeitos de massa
 (\emph{mass effects}), efeitos de densidade sobre as taxas de colonização, como, por exemplo, o efeito
-resgate (\emph{rescue effect}), são fundamentais. As relações entre imigração, emigração e densdidades nas manchas
+resgate (\emph{rescue effect}), são fundamentais. As relações entre imigração, emigração e densidades nas manchas
 são importantes para descrever a dinâmica da metacomunidade, como no caso de fontes e sorvedouros (\emph{source-sink dynamics}).
 Na perspectiva neutra a riqueza se estabiliza e a composição deriva 
 pelo  balanço entre extinções estocásticas e colonizações no nível local 
-e especiação no nível regional. %% citar o Hubbell
+e especiação no nível regional \citep{hubbell2001}.
 
 Só é possível que o critério de persistência de comunidades no nível da
 metacomunidade se distinga do critério de persistência local (com espaço
 homogêneo) quando há assincronia temporal entre as comunidades locais, o que
-requer que a dispersão das populações seja fraca o suficiente. %%citar 1-2 referências. Sugiro alguma das revisões do Leibold e Mouquet & Loreau
+requer que a dispersão das populações seja fraca o suficiente
+\citep{chesson1981,amarasekare2003}.
+%%citar 1-2 referências. Sugiro alguma das revisões do Leibold e Mouquet & Loreau
+%%%% esse ponto não fica claro nas revisões, mas sim nos 2 que coloquei.
 Por outro lado, eventos
 de dispersão muito raros não permitiriam que efeitos de massa ocorressem, e
-tornaria muito lento o processo de \emph{sepcies sorting}. Dessa maneira,
+tornaria muito lento o processo de \emph{species sorting}. Dessa maneira,
 vemos que as diferentes perspectivas estão, em geral, associadas a certas
 escalas de tempo dos processos de dispersão e da dinâmica de metacomunidades.
 
@@ -207,12 +217,9 @@ díspares, mostrando que, muitas vezes, processos biológicos distintos atuam
 pelos mesmos mecanismos. Modelos em ecologia e evolução em geral não podem 
 atender a estes três objetivos igualmente bem, havendo uma demanda conflitante
 entre generalidade, realismo e precisão \citep{levins1966}. 
-Este proposta concentra-se no desenvolvimento de modelos gerais e com realismo biológico
+Esta proposta concentra-se no desenvolvimento de modelos gerais e com realismo biológico
 que contribuam para o avanço da teoria de metacomunidades.
 
-\fimdesection
-
-%\section{Métodos} sugrio que esta parte faça parte da introdução e a outra vá para métodos, depois dos objetivos
 
 \subsubsection*{Abordagens matemáticas}
 
@@ -224,8 +231,10 @@ mais simples de apenas duas manchas), ou ainda pode permanecer implícita, caso
 em que apenas as taxas (ou probabilidades) de ocupação do total de manchas são
 modeladas. Já as variáveis de estado podem ser densidades populacionais,
 contínuas, ou números de indivíduos em cada mancha, ou ainda probabilidades
-(ou taxas) de ocupação de manchas. 
+(ou taxas) de ocupação de cada mancha.
 %% No caso de ocupação as variáveis de estado não seriam a proporção de manchas ocupadas? Taxas e probabilidade me parecem parãmetros
+%%%% probabilidade (ou taxa) de ocupação do total de manchas é a mesma coisa que proporção de
+%%%% manchas ocupadas, não?
 Essas escolhas são fortemente ligadas às
 escalas subjacentes e prioridades da modelagem. Por exemplo, um
 modelo clássico (tipo Levins) para duas espécies competindo é definido como
@@ -241,12 +250,14 @@ modelo clássico (tipo Levins) para duas espécies competindo é definido como
 \end{equation}
 % 
 onde os $p_i$ são as proporções de manchas ocupadas, com $p_0 =
-1-(p_1+p_2+p_3)$. A escala de tempo é tal que detalhes da dinâmica local de cada mancha
+1-(p_1+p_2+p_3)$, e portanto o espaço é implícito. A escala de tempo é tal que detalhes da dinâmica local de cada mancha
 são irrelevantes; ao mesmo tempo, assume-se que a dispersão não é suficiente para
 sincronizar a dinâmica de toda a região; assume-se ainda que o ambiente é
 homogêneo -- no sentido de que todas as manchas são equivalentes -- e que há
 extinção estocástica recorrente das populações.
 %% Não é importante assinalar que o espaço é implícito?
+%%%% eu falei antes que era um modelo tipo Levins, que pra mim diz
+%%%% imediatamente que o espaço é implícito, mas acrescentei essa informação agora.
 
 Dadas as premissas acima, a formulação desse modelo não permite
 qualquer conclusão sobre fenômenos que envolvam efeitos de massa ou \emph{species sorting}. 
@@ -262,7 +273,7 @@ manchas que incorpora esses dois efeitos:
         & i, j = 1, 2, \qquad i \neq j~,
     \end{aligned}
 \end{equation}
-
+%
 onde $X_i$ e $Y_i$ são as abundâncias de cada espécie na mancha $i$. Neste
 caso, as densidades são contínuas e a dinâmica populacional é acompanhada numa
 escala de tempo mais curta (``local''). Além disso, pode-se introduzir
@@ -292,14 +303,14 @@ a vantagem de que o operador $\nabla$ permite a descrição mecanicista da compo
 espacial do problema.
 
 Naturalmente, outras formas de introdução do espaço podem ser mais vantajosas,
-de acordo com a questão explorada. Por exemplo, \citet{law2000} desenvolvem um
+de acordo com a questão explorada. Por exemplo, \citet{law2000} desenvolveram um
 modelo espacial, estocástico e baseado em indivíduos, para comunidades de
-plantas e, por meio de uma aproximação, conseguem reduzí-lo a um sistema mais
+plantas e, por meio de uma aproximação, conseguiram reduzi-lo a um sistema mais
 fácil de tratar. 
 %% reduziram a um sistema de equações de reação-difusão?
-Com isso, eles conseguiram demosntrar que 
-espécies competitivamente inferiores podem
-coexistir, e até mesmo superar, 
+%%%% Não, a um sistema de equações integro-diferenciais.
+Com isso, eles demonstraram que espécies competitivamente inferiores podem
+coexistir, e até mesmo excluir, 
 %% superar = exluir ou a ter densidades maiores?
 espécies com maior habilidade competitiva que
 têm dispersão limitada. Isso é possível quando a espécie superior é mais
@@ -548,7 +559,7 @@ ser sutil.
 
 
 \bibliographystyle{amnatnat}
-\bibliography{referencias,/home/renato/Dropbox/posdoc/sumula/minhas_citacoes}
+\bibliography{referencias,minhas_citacoes}
 
 \vskip 3.0cm
 {\hfill S\~ao Paulo, \today}
