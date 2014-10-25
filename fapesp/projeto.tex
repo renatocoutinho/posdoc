@@ -103,7 +103,7 @@ de populações, modelos matemáticos
 \vskip 3.0cm
 {\it
 
-    [TODO: atualizar tradução]
+%    [TODO: atualizar tradução]
 
     This project studies the dynamics of metacommunities, i.e.
     ecological communities connected by dispersal, in situations in which
@@ -112,7 +112,11 @@ de populações, modelos matemáticos
 
     The proposed project aims to explore and extend the theoretical framework
     of such systems by integrating results from the study of ecological modules,
-    as well as from landscape ecology, to the dynamics of metacommunities.
+    as well as from landscape ecology, to the dynamics of metacommunities. In
+    order to achieve that, we shall develop and analyze new mathematical
+    models, using tools from the study of dynamical systems such as
+    differential equations.
+
 }
 
 \newpage
@@ -434,7 +438,7 @@ espécies.
 
 \fimdesection
 
-\section{Procedimentos}
+\section{Metodologia} % Procedimentos?
 %% Esta é parte que demanda mais atenção, veja comentários abaixo.
 %% O que te sugiro trabalhar é tranquilizar o parecerista de que há um método e qual é ele.
 %% Um roteiro:
@@ -442,31 +446,110 @@ espécies.
 %% 2 - Explicar numa sequencia de passos for dummies o que é desenvolver um modelo matemático com auxílio destas ferramnetas. Aqui cabem tanto as etapas básicas como em cada uma alguma tecnicalidade de como é feito (e.g., crição de classes em Python e seus métodos para realizar os cálculos, etc).
 %% 3 - Indicar nestes passos os critérios para avaliar se os objetivos proposto para modelo foi alcançado.
 %% Sei que pode parecer estranho tanto detalhe, mas há uma cultura na bio de que métodologia tem que ter um protocolo mais definido.
-Os métodos tradicionais para a análise de modelos matemáticos como os mencionamos 
-se dividem em duas categorias: técnicas
-analíticas e técnicas computacionais. As primeiras consistem basicamente na
-aplicação da chamada análise qualitativa de sistemas de equações diferenciais,
-em que se busca as soluções estacionárias do problema e sua estabilidade, e a
-partir disso pode-se compreender a dinâmica do sistema como um todo
-\citep{murray2002}. Em problemas espacialmente explícitos, tais métodos são de
-difícil implementação, mas existem métodos de homogeneização que, por vezes,
-oferecem boas aproximações \citep{cobbold2014}. Embora usualmente essas
-técnicas se contraponham às técnicas computacionais, várias etapas dos
-cálculos analíticos, tais como encontrar soluções de equações algébricas e
-autovalores, podem se beneficiar de ferramentas computacionais (por exemplo, a
-biblioteca SymPy \citep{sympy}).
-
-Já os métodos computacionais consistem, no mais das vezes, na simulação das
-equações, empregando ferramentas do cálculo numérico \citep{iserles2009}. Já
-temos ampla experiência no uso de bibliotecas de \emph{software} livres em
-Python, como o SciPy \citep{scipy}, que provê rotinas muito robustas para
-integração numérica de sistemas de equações diferenciais.
 
 %% te sugiro avaliar se é preciso distinguir abordagem analítica do que vc chama de computacional, que para biólogos parece a mesma coisa. Por outro lado, abordagem computacional para biólogos são simulações computacionais da dinâmica, como no caso de ABMs, autômatos celulares, etc. Esta é a distinção crucial para nós em relação ao que chamamos de métodos matemáticos, balaio no qual jogamos tanto soluções analíticas senso estrito como as que usam aproximações numéricas computacionais.
 %% Nós colocamos no mesmo balaio porque não nos parece haver muita diferença qualitativa entre uma análise qualitativa (estados estacionários, equilíbrio, etc) analítica ou numérica/computacional.
 %% A distinção aqui vai servir apenas para pontuar que vc vai usar a abordagem matemática e não a de simulações.
 %% Em seguida, e mais importante de tudo: um resumo das etapas de desenvolvimento do modelo, na forma de bullets, para que não digam que falta uma receita ao projeto. Biólogos tem horro a metodologias muito abertas, por estranho que te pareça.
 
+Neste projeto, estamos interessados no comportamento de sistemas no nível
+populacional, isto é, buscamos condensar a expressão de processos que ocorrem
+na escala de indivíduos em efeitos que ocorrem no nível de populações
+\citep{turchin2003} ou no nível acima, de metapopulações e metacomunidades.
+Isso nos leva a considerar modelos dinâmicos cujas variáveis são populações,
+representadas mais naturalmente por equações diferenciais ou a diferenças,
+cujas previsões são obtidas usando técnicas analíticas e aproximações
+numéricas provenientes da teoria de sistemas dinâmicos, em contraste com
+modelos computacionais, em que o comportamento de cada indivíduo é modelado, e
+a partir disso simula-se o sistema.
+
+A elaboração de cada modelo é um processo criativo, que envolve idas e vindas,
+já que a cada passo é necessário analisar as hipóteses e suas consequências,
+assim como possíveis influências de simplificações necessárias a essa análise.
+Após definidos os propósitos para o modelo que se pretende construir, procedemos
+de maneira geral da seguinte forma:
+
+\renewcommand{\thesubsubsection}{\arabic{subsubsection}} % sem número de seção
+
+\subsubsection{Formulação}
+
+Levando em conta os objetivos, escolhemos o nível de descrição adequado, isto
+é, como são descritas as variáveis independentes (tempo e espaço) e o estado
+do sistema (populações). Por exemplo, se estamos interessados em fazer
+previsões sobre paisagens específicas, incluindo o papel de tamanho e
+conectividade de cada mancha, é necessário que o espaço figure explicitamente
+no modelo.
+
+Precisamos ainda especificar quais processos serão levados em conta.  Neste
+projeto, especificamente, consideramos processos como migração, colonização e
+extinção, bem como interações entre espécies -- competição e predação. Em
+modelos de equações diferenciais, a cada processo corresponde um termo que
+representa sua contribuição instantânea ao estado do sistema. É importante que
+as escalas de tempo e espaço desses termos sejam compatíveis com a descrição
+determinada previamente. Quando modelamos extinção estocástica, por exemplo,
+numa descrição em que o espaço está implícito, podemos simplesmente
+acrescentar uma taxa por mancha constante -- ``determinística'' --, como no
+modelo de metapopulações de Levins \citep{levins1969}; já numa situação em que
+acompanhamos as densidades populacionais em cada mancha e em escala de tempo
+curta, esse mesmo processo deve ser modelado usando um termo estocástico.
+
+% como expressar melhor ``mais simples e mais complicada''?
+% mover para o início da subseção?
+Esta etapa é, ao mesmo tempo, a mais simples e a mais complicada pois, embora
+a expressão de um sistema de equações seja sucinta, a intuição de quais
+opções serão mais produtivas e parcimoniosas exige experiência prévia com uma
+gama de modelos e abordagens.
+
+\subsubsection{Análise}
+
+Dado o modelo matemático que desejamos estudar, empregamos métodos analíticos
+e aproximações numéricas apropriadas para sua análise, isto é, para determinar
+o comportamento dinâmico e o estado de longo prazo do sistema em função de
+detalhes específicos a cada situação -- os parâmetros do modelo.
+
+O método mais tradicional de análise consiste na chamada análise qualitativa
+de sistemas de equações diferenciais, em que se busca as soluções
+estacionárias do problema e sua estabilidade, e a partir disso pode-se
+compreender a dinâmica do sistema como um todo \citep{murray2002,gurney1998}.
+Em problemas espacialmente explícitos, tais métodos são de difícil
+implementação, mas existem métodos de homogeneização que, por vezes, oferecem
+boas aproximações \citep{cobbold2014}. Em muitos casos, alguns cálculos
+envolvidos, tais como encontrar soluções para sistemas de equações algébricas
+ou os autovalores de matrizes, são intratáveis usando apenas papel e caneta,
+% ugh! ``manualmente'' também não é bom..
+mas podem ser realizados com o auxílio de ferramentas computacionais, como a
+a biblioteca para matemática simbólica SymPy \citep{sympy}.
+
+Muitas vezes, lançamos mão de métodos de aproximação numérica das soluções,
+especialmente quando precisamos determinar a variação com o tempo das soluções
+(em contraste com o caso em que buscamos apenas saber o estado final).  Usamos
+ferramentas do cálculo numérico \citep{iserles2009}, em geral já implementadas
+em ferramentas computacionais como o SciPy \citep{scipy}, em Python, que provê
+rotinas muito robustas para a integração numérica de sistemas de equações
+diferenciais. Em sistemas de equações sem espaço, escrevemos funções que
+correspondem às equações do sistema estudado, fornecemos os parâmetros e o
+estado inicial, e invocamos uma função da biblioteca que efetua a integração
+numérica e retorna a solução em função do tempo. Já em sistemas em que a
+representação do espaço é contínua, o procedimento é mais complexo, e devemos
+aproximar a distribuição espacial por um número finito, porém grande, de
+segmentos no espaço, e determinar equações aproximadas para o estado de cada
+um dele \citep{iserles2009}, que serão então integradas usando o mesmo método
+de antes.
+
+\subsubsection{Interpretação e síntese}
+
+Que mecanismos permitem a persistência das espécies? Sob que condições há
+maior diversidade de espécies, ou menores probabilidades de extinção? Essas e
+outras questões de interesse ecológico só podem ser respondidas por modelos
+quando é possível traçar uma analogia clara entre os processos introduzidos no
+modelo e seus parâmetros. Esta última etapa consiste em conectar as hipóteses
+assumidas no início e conectá-las às conclusões obtidas, buscando compreender
+o mecanismo que leva das primeiras às últimas à luz do modelo desenvolvido. 
+
+% a terminar..
+
+%Nes avaliando a , até alcançar modelos que sejam informativos,
+%porém suficientemente simples para que sua interpretação seja clara. 
 
 \section{Cronograma de trabalho}
 % Se os passos gerais de elaboração de cada modelo estiverem claros na seção acima estas considerações aqui são desnecessárias.
@@ -490,9 +573,9 @@ integração numérica de sistemas de equações diferenciais.
 % internacionais que têm se mostrado produtivas.
 
 \begin{table}[htb] 
-\small
+\footnotesize
 \noindent
-\begin{tabular}{p{6cm}|p{0.3cm}p{0.3cm}p{0.3cm}p{0.3cm}p{0.3cm}p{0.3cm}p{0.3cm}p{0.3cm}p{0.3cm}p{0.3cm}p{0.3cm}p{0.3cm}}
+\begin{tabular}{p{5.4cm}|p{0.2cm}p{0.2cm}p{0.2cm}p{0.2cm}p{0.2cm}p{0.2cm}p{0.2cm}p{0.2cm}p{0.2cm}p{0.2cm}p{0.2cm}p{0.2cm}}
     {\normalsize Atividades\textbackslash\hspace{0.1cm} Bimestre} & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8
                                                                 & 9 & 10 & 11 & 12 \\ \hline 
                                               revisão da literatura& \cellcolor[gray]{0.8} & \cellcolor[gray]{0.8} &  &  &  &  &  &  &  &  &  &   \\
@@ -558,7 +641,7 @@ abordagens teóricas e de argumentos e hipóteses cuja tradução matemática po
 ser sutil.
 
 
-\bibliographystyle{amnatnat}
+\bibliographystyle{amnatnat-pt}
 \bibliography{referencias,minhas_citacoes}
 
 \vskip 3.0cm
