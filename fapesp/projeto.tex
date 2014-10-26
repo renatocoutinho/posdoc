@@ -74,8 +74,8 @@ de populações, modelos matemáticos
 
     O projeto proposto pretende explorar e estender o quadro teórico desses
     sistemas, incorporando métodos e resultados provenientes da teoria de
-    metapopulações do estudo de módulos de interação da ecologia de
-    comunidades e à dinâmica de metacomunidades.  Para isso, deve-se
+    metapopulações e do estudo de módulos de interação da ecologia de
+    comunidades à dinâmica de metacomunidades.  Para isso, deve-se
     desenvolver e analisar novos modelos matemáticos, usando ferramentas de
     sistemas dinâmicos, como sistemas de equações diferenciais.
 
@@ -508,7 +508,7 @@ o comportamento dinâmico e o estado de longo prazo do sistema em função de
 detalhes específicos a cada situação -- os parâmetros do modelo.
 
 O método mais tradicional de análise consiste na chamada análise qualitativa
-de sistemas de equações diferenciais, em que se busca as soluções
+de sistemas de equações diferenciais, em que se calculam as soluções
 estacionárias do problema e sua estabilidade, e a partir disso pode-se
 compreender a dinâmica do sistema como um todo \citep{murray2002,gurney1998}.
 Em problemas espacialmente explícitos, tais métodos são de difícil
@@ -518,7 +518,7 @@ envolvidos, tais como encontrar soluções para sistemas de equações algébric
 ou os autovalores de matrizes, são intratáveis usando apenas papel e caneta,
 % ugh! ``manualmente'' também não é bom..
 mas podem ser realizados com o auxílio de ferramentas computacionais, como a
-a biblioteca para matemática simbólica SymPy \citep{sympy}.
+biblioteca para matemática simbólica SymPy \citep{sympy}.
 
 Muitas vezes, lançamos mão de métodos de aproximação numérica das soluções,
 especialmente quando precisamos determinar a variação com o tempo das soluções
@@ -533,23 +533,22 @@ numérica e retorna a solução em função do tempo. Já em sistemas em que a
 representação do espaço é contínua, o procedimento é mais complexo, e devemos
 aproximar a distribuição espacial por um número finito, porém grande, de
 segmentos no espaço, e determinar equações aproximadas para o estado de cada
-um dele \citep{iserles2009}, que serão então integradas usando o mesmo método
+um deles \citep{iserles2009}, que serão então integradas usando o mesmo método
 de antes.
 
 \subsubsection{Interpretação e síntese}
 
-Que mecanismos permitem a persistência das espécies? Sob que condições há
-maior diversidade de espécies, ou menores probabilidades de extinção? Essas e
-outras questões de interesse ecológico só podem ser respondidas por modelos
-quando é possível traçar uma analogia clara entre os processos introduzidos no
-modelo e seus parâmetros. Esta última etapa consiste em conectar as hipóteses
-assumidas no início e conectá-las às conclusões obtidas, buscando compreender
-o mecanismo que leva das primeiras às últimas à luz do modelo desenvolvido. 
+% difícil..
+Esta última etapa consiste em conectar as hipóteses assumidas no início às
+conclusões obtidas, buscando compreender o mecanismo que leva das primeiras às
+últimas à luz do modelo desenvolvido. As questões de interesse ecológico só
+podem ser respondidas por modelos quando é possível estabelecer uma relação
+clara entre os processos introduzidos no modelo e seus parâmetros.
 
-% a terminar..
-
-%Nes avaliando a , até alcançar modelos que sejam informativos,
-%porém suficientemente simples para que sua interpretação seja clara. 
+É a partir dessa compreensão que somos capazes de julgar se as previsões do
+modelo correspondem ao que era esperado intuitivamente, ou ao que já era
+conhecido empiricamente, e assim podemos idealizar novos experimentos e testes
+da teoria.
 
 \section{Cronograma de trabalho}
 % Se os passos gerais de elaboração de cada modelo estiverem claros na seção acima estas considerações aqui são desnecessárias.
