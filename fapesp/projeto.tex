@@ -143,8 +143,9 @@ teoria de biogeografia de ilhas, que demonstra como o número de espécies em um
 pelo balanço entre colonização e extinção local {macarthur1967}. 
 É da mesma época a teoria clássica de metapopulações \citep{levins1969,levins1971}, 
 que mostra como a proporção de manchas ocupadas por uma espécie pode também estabilizar-se pelo 
-balanço entre colonização e extinção.
-%% Colocar aqui nesta seção de fundadores o Skellma?
+balanço entre colonização e extinção. 
+%% Aqui nestas eção de fundadores vale mencionar o Skellam, que é a aboradgem mais antiga e que usa os modelos de reação-difusão. isso também prepara terreno para as próximas seções, que irão falat de equações RD
+%% 
 A concepção de que padrões de riqueza e ocupação em sistemas de manchas pode ser influenciada, ou até
 determinada, pelo contexto regional por meio do trânsito de indivíduos 
 é uma das ideias centrais da ecologia de
@@ -173,13 +174,15 @@ cada mancha em sincronia com suas características quando há alterações ambie
 %%%% é claro que você pode introduzir esses efeitos de maneira que eles tenham
 %%%% relativamente pouca importância. Alterei um pouco a frase, vê se fica
 %%%% melhor.
+%% Ficou ótimo assim, bem geral!
 Já na perspectiva de efeitos de massa
 (\emph{mass effects}), efeitos de densidade sobre as taxas de colonização, como, por exemplo, o efeito
 resgate (\emph{rescue effect}), são fundamentais. As relações entre imigração, emigração e densidades nas manchas
 são importantes para descrever a dinâmica da metacomunidade, como no caso de fontes e sorvedouros (\emph{source-sink dynamics}).
+%% Colocar 1-2 referências sobre mass effectc e source-sink.
 Na perspectiva neutra a riqueza se estabiliza e a composição deriva 
 pelo  balanço entre extinções estocásticas e colonizações no nível local 
-e especiação no nível regional \citep{hubbell2001}.
+e especiação no nível regional, em um cenário em que as espécies têm as mesas taxas demográficas \citep{hubbell2001}.
 
 Só é possível que o critério de persistência de comunidades no nível da
 metacomunidade se distinga do critério de persistência local (com espaço
@@ -187,7 +190,8 @@ homogêneo) quando há assincronia temporal entre as comunidades locais, o que
 requer que a dispersão das populações seja fraca o suficiente
 \citep{chesson1981,amarasekare2003}.
 %%citar 1-2 referências. Sugiro alguma das revisões do Leibold e Mouquet & Loreau
-%%%% esse ponto não fica claro nas revisões, mas sim nos 2 que coloquei.
+%%%% esse ponto não fica claro nas revisões, mas sim nos 2 que coloquei. 
+%% ok!
 Por outro lado, eventos
 de dispersão muito raros não permitiriam que efeitos de massa ocorressem, e
 tornaria muito lento o processo de \emph{species sorting}. Dessa maneira,
@@ -239,6 +243,9 @@ contínuas, ou números de indivíduos em cada mancha, ou ainda probabilidades
 %% No caso de ocupação as variáveis de estado não seriam a proporção de manchas ocupadas? Taxas e probabilidade me parecem parãmetros
 %%%% probabilidade (ou taxa) de ocupação do total de manchas é a mesma coisa que proporção de
 %%%% manchas ocupadas, não?
+%% Vejo duas diferenças:
+%% Probabilidades são valores esperados de proporções (se vc aceita a concepção frequentista de probabilidade), e nesse sentido taxas téoricas. Proporções observadas estão sujeitas à variação em relação a este esperado por efeitos de amostragem e número finito de manchas.
+%% mas meu ponto principal é que as proporções são as variáveis de estado, ou seja o que se pretende explicar. Para biólogos isso é é a variável cuja a derivada está à esquerda numa DE, ou que tb chamamos de variáveld dependente. Muitos autores da área usam a palavra "taxa" apenas para os parâmetros ou coeficientes, que estão no lado direito da equação.
 Essas escolhas são fortemente ligadas às
 escalas subjacentes e prioridades da modelagem. Por exemplo, um
 modelo clássico (tipo Levins) para duas espécies competindo é definido como
@@ -452,7 +459,7 @@ espécies.
 %% A distinção aqui vai servir apenas para pontuar que vc vai usar a abordagem matemática e não a de simulações.
 %% Em seguida, e mais importante de tudo: um resumo das etapas de desenvolvimento do modelo, na forma de bullets, para que não digam que falta uma receita ao projeto. Biólogos tem horro a metodologias muito abertas, por estranho que te pareça.
 
-Neste projeto, estamos interessados no comportamento de sistemas no nível
+Neste projeto, estamos interessados no comportamento de sistemas teóricos no nível
 populacional, isto é, buscamos condensar a expressão de processos que ocorrem
 na escala de indivíduos em efeitos que ocorrem no nível de populações
 \citep{turchin2003} ou no nível acima, de metapopulações e metacomunidades.
@@ -463,10 +470,11 @@ numéricas provenientes da teoria de sistemas dinâmicos, em contraste com
 modelos computacionais, em que o comportamento de cada indivíduo é modelado, e
 a partir disso simula-se o sistema.
 
-A elaboração de cada modelo é um processo criativo, que envolve idas e vindas,
-já que a cada passo é necessário analisar as hipóteses e suas consequências,
-assim como possíveis influências de simplificações necessárias a essa análise.
-Após definidos os propósitos para o modelo que se pretende construir, procedemos
+A elaboração de cada modelo é um processo iterativo, que parte em geral 
+modelos simples com propriedades bem conhecidas. Diversos procedimentos de análise são então usados
+para desenvolver mudanças no modelo para alcançar um certo objetivo, e também para 
+avaliar as consequências destas mudanças no comportamento do modelo.
+Sendo construção de conteúdos teóricos novos, mas que pode ser caracterizado 
 de maneira geral da seguinte forma:
 
 \renewcommand{\thesubsubsection}{\arabic{subsubsection}} % sem número de seção
@@ -488,13 +496,13 @@ representa sua contribuição instantânea ao estado do sistema. É importante q
 as escalas de tempo e espaço desses termos sejam compatíveis com a descrição
 determinada previamente. Quando modelamos extinção estocástica, por exemplo,
 numa descrição em que o espaço está implícito, podemos simplesmente
-acrescentar uma taxa por mancha constante -- ``determinística'' --, como no
+acrescentar uma taxa constante por mancha -- ``determinística'' --, como no
 modelo de metapopulações de Levins \citep{levins1969}; já numa situação em que
 acompanhamos as densidades populacionais em cada mancha e em escala de tempo
 curta, esse mesmo processo deve ser modelado usando um termo estocástico.
-
 % como expressar melhor ``mais simples e mais complicada''?
 % mover para o início da subseção?
+% Me parece muito bom assim, e neste lougar do texto
 Esta etapa é, ao mesmo tempo, a mais simples e a mais complicada pois, embora
 a expressão de um sistema de equações seja sucinta, a intuição de quais
 opções serão mais produtivas e parcimoniosas exige experiência prévia com uma
@@ -515,10 +523,11 @@ Em problemas espacialmente explícitos, tais métodos são de difícil
 implementação, mas existem métodos de homogeneização que, por vezes, oferecem
 boas aproximações \citep{cobbold2014}. Em muitos casos, alguns cálculos
 envolvidos, tais como encontrar soluções para sistemas de equações algébricas
-ou os autovalores de matrizes, são intratáveis usando apenas papel e caneta,
-% ugh! ``manualmente'' também não é bom..
-mas podem ser realizados com o auxílio de ferramentas computacionais, como a
-biblioteca para matemática simbólica SymPy \citep{sympy}.
+ou os autovalores de matrizes existem mas são intratáveis na prática, ou tomariam 
+muito tempo.
+Hoje dispomos de rotinas computacionais de matemática simbólica que realizam este
+trabalho de manira mais rápida e segura, como a poderosa
+biblioteca SymPy \citep{sympy}, que usaremos.
 
 Muitas vezes, lançamos mão de métodos de aproximação numérica das soluções,
 especialmente quando precisamos determinar a variação com o tempo das soluções
