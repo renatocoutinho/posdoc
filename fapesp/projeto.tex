@@ -463,9 +463,9 @@ Neste projeto, estamos interessados no comportamento de sistemas teóricos no n�
 populacional, isto é, buscamos condensar a expressão de processos que ocorrem
 na escala de indivíduos em efeitos que ocorrem no nível de populações
 \citep{turchin2003} ou no nível acima, de metapopulações e metacomunidades.
-Isso nos leva a considerar modelos dinâmicos cujas variáveis são populações,
-representadas mais naturalmente por equações diferenciais ou a diferenças,
-cujas previsões são obtidas usando técnicas analíticas e aproximações
+Isso nos leva a considerar modelos dinâmicos cujas variáveis são propriedades das populações,
+representadas mais naturalmente por suas taxas de variação em equações diferenciais ou a diferenças.
+Com esses modelos matemáticos, as previsões são obtidas usando técnicas analíticas e aproximações
 numéricas provenientes da teoria de sistemas dinâmicos, em contraste com
 modelos computacionais, em que o comportamento de cada indivíduo é modelado, e
 a partir disso simula-se o sistema.
@@ -502,7 +502,7 @@ acompanhamos as densidades populacionais em cada mancha e em escala de tempo
 curta, esse mesmo processo deve ser modelado usando um termo estocástico.
 % como expressar melhor ``mais simples e mais complicada''?
 % mover para o início da subseção?
-% Me parece muito bom assim, e neste lougar do texto
+% Me parece muito bom assim, e neste lugar do texto
 Esta etapa é, ao mesmo tempo, a mais simples e a mais complicada pois, embora
 a expressão de um sistema de equações seja sucinta, a intuição de quais
 opções serão mais produtivas e parcimoniosas exige experiência prévia com uma
@@ -523,7 +523,7 @@ Em problemas espacialmente explícitos, tais métodos são de difícil
 implementação, mas existem métodos de homogeneização que, por vezes, oferecem
 boas aproximações \citep{cobbold2014}. Em muitos casos, alguns cálculos
 envolvidos, tais como encontrar soluções para sistemas de equações algébricas
-ou os autovalores de matrizes existem mas são intratáveis na prática, ou tomariam 
+ou os autovalores de matrizes, existem mas são intratáveis na prática, ou tomariam 
 muito tempo.
 Hoje dispomos de rotinas computacionais de matemática simbólica que realizam este
 trabalho de manira mais rápida e segura, como a poderosa
@@ -548,12 +548,24 @@ de antes.
 \subsubsection{Interpretação e síntese}
 
 % difícil..
+% Sim, a mais difícil, mas acho que vale refletir mais sobre isso.
+%% Em primeiro lugar, sobre a relação entre o resultado matemático e sua interpretação
+%% Não diria que com o resultado da análise ele é possível compreender o mecanismo real, mas sim
+%% quais as consequência dos mecanismos propostos sobre
+%% a dinâmica do sistema, seus estados de equilíbrio e sua estabilidade.
+%% Em segundo há a questão da generalidade de cada conclusão destas. 
+%% Aqui caberia mencionar que isso é feito identificando-se em espaços de fase 
+%% regiões que caracterizam um certa propriedade de interesse biológico (pe.ex
+%% um regime, pontos estacionários não triviais, estados estáveis, limiares).
+%% Feito isso seria possível enunciar a regras de relevância biológica que regem
+%% a dinâmica, sob um dado modelo.
+%% Terceiro, vai ajudar muito o assessor se aqui você der alguns exemplos d
+
 Esta última etapa consiste em conectar as hipóteses assumidas no início às
 conclusões obtidas, buscando compreender o mecanismo que leva das primeiras às
 últimas à luz do modelo desenvolvido. As questões de interesse ecológico só
 podem ser respondidas por modelos quando é possível estabelecer uma relação
 clara entre os processos introduzidos no modelo e seus parâmetros.
-
 É a partir dessa compreensão que somos capazes de julgar se as previsões do
 modelo correspondem ao que era esperado intuitivamente, ou ao que já era
 conhecido empiricamente, e assim podemos idealizar novos experimentos e testes
