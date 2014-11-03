@@ -143,7 +143,10 @@ teoria de biogeografia de ilhas, que demonstra como o número de espécies em um
 pelo balanço entre colonização e extinção local {macarthur1967}. 
 É da mesma época a teoria clássica de metapopulações \citep{levins1969,levins1971}, 
 que mostra como a proporção de manchas ocupadas por uma espécie pode também estabilizar-se pelo 
-balanço entre colonização e extinção. 
+balanço entre colonização e extinção. Essas teorias foram construídas
+independentemente dos estudos de \citet{skellam1951}, que as precederam em
+mais de uma década, sobre a dispersão de populações por meio de equações de
+reação--difusão.
 %% Aqui nestas eção de fundadores vale mencionar o Skellam, que é a aboradgem mais antiga e que usa os modelos de reação-difusão. isso também prepara terreno para as próximas seções, que irão falat de equações RD
 %% 
 A concepção de que padrões de riqueza e ocupação em sistemas de manchas pode ser influenciada, ou até
@@ -161,7 +164,7 @@ mutuamente exclusivas. A primeira delas é a de dinâmica de manchas
 metapopulações de Levins \citep{levins1969,levins1971}. 
 Na perspectiva chamada de %ordenamento de espécies 
 \emph{species sorting}, os tipos de recursos determinam a composição local da comunidade,
-de modo que diferenças de nicho são mais importantes que a dinâmica espacial,
+de modo que diferenças de nicho são mais importantes que a dinâmica espacial
 e esta serve, no caso extremo, apenas para manter a composição da comunidade em
 cada mancha em sincronia com suas características quando há alterações ambientais. 
 %% Seguro que é isto? Minha leitura de species sorting é que as condições seletivas em cada mancha são diferentes, 
@@ -178,11 +181,13 @@ cada mancha em sincronia com suas características quando há alterações ambie
 Já na perspectiva de efeitos de massa
 (\emph{mass effects}), efeitos de densidade sobre as taxas de colonização, como, por exemplo, o efeito
 resgate (\emph{rescue effect}), são fundamentais. As relações entre imigração, emigração e densidades nas manchas
-são importantes para descrever a dinâmica da metacomunidade, como no caso de fontes e sorvedouros (\emph{source-sink dynamics}).
+são importantes para descrever a dinâmica da metacomunidade, como no caso de
+fontes e sorvedouros (\emph{source-sink dynamics}) \citep{mouquet2002,amarasekare2001}.
 %% Colocar 1-2 referências sobre mass effectc e source-sink.
 Na perspectiva neutra a riqueza se estabiliza e a composição deriva 
 pelo  balanço entre extinções estocásticas e colonizações no nível local 
-e especiação no nível regional, em um cenário em que as espécies têm as mesas taxas demográficas \citep{hubbell2001}.
+e especiação no nível regional, em um cenário em que as espécies têm as mesmas
+taxas demográficas \citep{hubbell2001}.
 
 Só é possível que o critério de persistência de comunidades no nível da
 metacomunidade se distinga do critério de persistência local (com espaço
@@ -239,13 +244,14 @@ mais simples de apenas duas manchas), ou ainda pode permanecer implícita, caso
 em que apenas as taxas (ou probabilidades) de ocupação do total de manchas são
 modeladas. Já as variáveis de estado podem ser densidades populacionais,
 contínuas, ou números de indivíduos em cada mancha, ou ainda probabilidades
-(ou taxas) de ocupação de cada mancha.
+de ocupação de cada mancha.
 %% No caso de ocupação as variáveis de estado não seriam a proporção de manchas ocupadas? Taxas e probabilidade me parecem parãmetros
 %%%% probabilidade (ou taxa) de ocupação do total de manchas é a mesma coisa que proporção de
 %%%% manchas ocupadas, não?
 %% Vejo duas diferenças:
 %% Probabilidades são valores esperados de proporções (se vc aceita a concepção frequentista de probabilidade), e nesse sentido taxas téoricas. Proporções observadas estão sujeitas à variação em relação a este esperado por efeitos de amostragem e número finito de manchas.
 %% mas meu ponto principal é que as proporções são as variáveis de estado, ou seja o que se pretende explicar. Para biólogos isso é é a variável cuja a derivada está à esquerda numa DE, ou que tb chamamos de variáveld dependente. Muitos autores da área usam a palavra "taxa" apenas para os parâmetros ou coeficientes, que estão no lado direito da equação.
+%%%% ok, vou deixar só probabilidade
 Essas escolhas são fortemente ligadas às
 escalas subjacentes e prioridades da modelagem. Por exemplo, um
 modelo clássico (tipo Levins) para duas espécies competindo é definido como
@@ -296,7 +302,7 @@ espacial da região é reduzida a apenas duas manchas.
 Apesar de sua elegância, modelos simples de equações diferenciais como os
 apresentados não capturam algumas complexidades da dinâmica espacial que podem
 ser de grande importância. Uma das formas de abordar problemas espacialmente
-complexos é por meio de equações de reação--difusão \citep{murray2002}:
+complexos é por meio de equações de reação--difusão \citep{skellam1951,murray2002}:
 
 \begin{equation}
   \begin{aligned}
@@ -470,12 +476,12 @@ numéricas provenientes da teoria de sistemas dinâmicos, em contraste com
 modelos computacionais, em que o comportamento de cada indivíduo é modelado, e
 a partir disso simula-se o sistema.
 
-A elaboração de cada modelo é um processo iterativo, que parte em geral 
+A elaboração de cada modelo é um processo iterativo, que parte em geral de
 modelos simples com propriedades bem conhecidas. Diversos procedimentos de análise são então usados
-para desenvolver mudanças no modelo para alcançar um certo objetivo, e também para 
+para desenvolver mudanças no modelo para alcançar um certo objetivo, e também para
 avaliar as consequências destas mudanças no comportamento do modelo.
-Sendo construção de conteúdos teóricos novos, mas que pode ser caracterizado 
-de maneira geral da seguinte forma:
+Buscamos a construção de conteúdos teóricos novos, mas que pode ser
+caracterizada de maneira geral da seguinte forma:
 
 \renewcommand{\thesubsubsection}{\arabic{subsubsection}} % sem número de seção
 
@@ -523,10 +529,10 @@ Em problemas espacialmente explícitos, tais métodos são de difícil
 implementação, mas existem métodos de homogeneização que, por vezes, oferecem
 boas aproximações \citep{cobbold2014}. Em muitos casos, alguns cálculos
 envolvidos, tais como encontrar soluções para sistemas de equações algébricas
-ou os autovalores de matrizes, existem mas são intratáveis na prática, ou tomariam 
+ou os autovalores de matrizes, existem mas são intratáveis na prática, ou tomariam
 muito tempo.
 Hoje dispomos de rotinas computacionais de matemática simbólica que realizam este
-trabalho de manira mais rápida e segura, como a poderosa
+trabalho de maneira mais rápida e confiável, como a poderosa
 biblioteca SymPy \citep{sympy}, que usaremos.
 
 Muitas vezes, lançamos mão de métodos de aproximação numérica das soluções,
@@ -563,15 +569,55 @@ de antes.
 %% pode ser feita nos estudos de caso propostos. Por exemplo, vc pode lembrar o que vai se buscar nos
 %% resultados de cada modelo, e/ou indicar os espaços de fase relevantes.
 
-Esta última etapa consiste em conectar as hipóteses assumidas no início às
-conclusões obtidas, buscando compreender o mecanismo que leva das primeiras às
-últimas à luz do modelo desenvolvido. As questões de interesse ecológico só
-podem ser respondidas por modelos quando é possível estabelecer uma relação
-clara entre os processos introduzidos no modelo e seus parâmetros.
-É a partir dessa compreensão que somos capazes de julgar se as previsões do
-modelo correspondem ao que era esperado intuitivamente, ou ao que já era
-conhecido empiricamente, e assim podemos idealizar novos experimentos e testes
-da teoria.
+
+Esta última etapa consiste em extrair das análises e hipóteses do modelo o
+máximo de informação de interesse biológico, com vistas a estender nossa
+compreensão dos processos e mecanismos envolvidos, assim como nossa capacidade
+de prever cenários e delinear novos testes da teoria. Para tanto, é necessário
+clareza na relação entre os processos introduzidos e os parâmetros do modelo.
+
+%As questões de interesse ecológico só
+%podem ser respondidas por modelos quando é possível estabelecer uma relação
+%clara entre os processos introduzidos no modelo e seus parâmetros.
+%É a partir dessa compreensão que somos capazes de julgar se as previsões do
+%modelo correspondem ao que era esperado intuitivamente, ou ao que já era
+%conhecido empiricamente, e assim podemos idealizar novos experimentos e testes
+%da teoria.
+
+Um aspecto básico a ser considerado é delimitar os diferentes regimes
+previstos, que correspondem, na linguagem de sistemas dinâmicos, em
+identificar a quais valores de parâmetros correspondem a estabilidade de
+pontos de equilíbrio do sistema (e.g. a estabilidade da solução trivial, com
+população zero, equivale à extinção) ou características da solução (e.g.
+ciclos populacionais). As transições entre regimes ocorrem quando limiares são
+ultrapassados, e muitos êxitos da teoria ecológica residem em determinar quais
+características influenciam esses limiares (e.g. \citet{hanski2000,
+fussmann2000}).
+
+Essa análise do chamado espaço de parâmetros também é importante para avaliar
+a generalidade de um certo resultado: a expectativa é que regimes que existem
+apenas sob condições ou parâmetros muito restritos sejam raros na natureza.
+Por exemplo, um dos problemas da teoria tradicional de predação intraguilda,
+desenvolvida por \citet{holt1997}, é o fato de a coexistência entre presa e
+predador intraguilda ocorrer apenas para uma faixa de produtividade ambiental
+muito pequena, o que contradiz ampla evidência experimental \citep{arim2004}
+e induziu muitos trabalhos teóricos que buscam encontrar os processos que
+promovem coexistência porém são negligenciados pelos modelos mais simples (e.g.
+\citet{holt2007, amarasekare2008}).
+
+Por vezes, o modelo esclarece o mecanismo que leva as hipóteses assumidas no
+início às conclusões obtidas. Em seu artigo seminal, \citet{skellam1951}
+mostra como uma região de \emph{habitat} cercada por uma matriz completamente
+inóspita só é capaz de suportar uma população que cresce e se difunde se for
+maior que uma área mínima. Sua conclusão vai além do modelo específico
+empregado, e mostra que isso se deve aos processos de dispersão de indivíduos
+para a matriz (relacionado ao perímetro da região e à difusividade da
+espécie), e de crescimento populacional (relacionado à área e à taxa de
+crescimento), e portanto o limiar de persistência da população é determinado
+por relações entre perímetro e área da mancha e entre difusividade e taxa de
+crescimento intrínseco da população.
+
+\fimdesection
 
 \section{Cronograma de trabalho}
 % Se os passos gerais de elaboração de cada modelo estiverem claros na seção acima estas considerações aqui são desnecessárias.
@@ -594,7 +640,7 @@ da teoria.
 % Naturalmente, o candidato deve dar continuidade a colaborações nacionais e
 % internacionais que têm se mostrado produtivas.
 
-\begin{table}[htb] 
+\begin{table}[h!] 
 \footnotesize
 \noindent
 \begin{tabular}{p{5.4cm}|p{0.2cm}p{0.2cm}p{0.2cm}p{0.2cm}p{0.2cm}p{0.2cm}p{0.2cm}p{0.2cm}p{0.2cm}p{0.2cm}p{0.2cm}p{0.2cm}}
@@ -662,6 +708,7 @@ modelos em ecologia permite navegar nessa área, que apresenta uma vasta gama de
 abordagens teóricas e de argumentos e hipóteses cuja tradução matemática pode
 ser sutil, e ainda está por desenvolver-se \citet{leibold2011}.
 
+\fimdesection
 
 \bibliographystyle{amnatnat-pt}
 \bibliography{referencias,minhas_citacoes}
